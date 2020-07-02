@@ -1,1 +1,1 @@
-﻿<xml>﻿test</xml>
+﻿{node:﻿ 123}
