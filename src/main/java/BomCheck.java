@@ -10,7 +10,7 @@ public class BomCheck {
     public static void main(String[] args) throws Exception {
         byte[] withBom = Files.readAllBytes(Paths.get("test-data.txt"));
         System.out.println("current encoding: " + Charset.defaultCharset());
-        String withOutBom = "{node: 123}\n";
+        String withOutBom = "{\"node\": 123}\n";
         String str = new String(withBom, StandardCharsets.UTF_8).replaceAll("[\uFEFF-\uFFFF]", "");
         System.out.println(Arrays.toString(str.toCharArray()));
         System.out.println("withOutBom.equals(str): " + withOutBom.equals(str));
